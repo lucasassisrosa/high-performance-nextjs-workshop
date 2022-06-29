@@ -10,3 +10,9 @@ export async function getProducts() {
 
   return products;
 }
+
+export async function getProductById({ id }) {
+  await setTimeout(randomLatency());
+
+  return products.find((p) => p.id === Number(id));
+}
